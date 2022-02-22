@@ -1,4 +1,4 @@
-var commentsAPI = "http://localhost:3000/comments";
+var commentsAPI = " http://localhost:3000/comments";
 
 
 var positionX = 0;
