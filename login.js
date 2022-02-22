@@ -31,20 +31,7 @@ function nextSignUp(){
             <button id="register" onclick="Register()">
                 <h2>Register</h2>
             </button>
-            <ul id="nodeAccount">
-               <li>
-                <span>Username : 3 từ và phải viết HOA chữ cái đầu mỗi từ</span>
-               </li>
-
-               <li>
-                    <span>Email : Không được viết hoa,và phải đúng form Email</span>
-               </li>
-
-               <li>
-                <span>Password : Chứa kí tự in Hoa,chữ cái số và kí tự đặc biệt</span>
-               </li>
-
-            </ul>
+            
     `
 }
 
