@@ -47,7 +47,7 @@ function nextSignIn(){
         <h1>Sign In</h1>
     </div>
     <div id="SignIn_name">
-        <input type="text" id="userName" placeholder="Username : Phạm Tiến Tâm">
+        <input type="text" id="userName" placeholder="Username : Pham Tien Tam
         <span id="error_username"></span>
     </div>
     <div id="SignIn_password">
