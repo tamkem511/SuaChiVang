@@ -1,4 +1,4 @@
-var accountApi = "http://localhost:3000/accounts";
+var accountApi = " http://localhost:3000/accounts";
 
 // mở menuSearch
 var iconsSearch = true;
