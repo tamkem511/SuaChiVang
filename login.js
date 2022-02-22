@@ -1,4 +1,5 @@
-var accountApi = " http://localhost:3000/accounts";
+
+var accountApi = "http://localhost:3000/accounts";
 // chuyển sang đăng ký
 function nextSignUp(){
     document.getElementById("web").style.backgroundColor = "#f43648";
