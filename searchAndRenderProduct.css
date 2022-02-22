@@ -1,0 +1,313 @@
+
+/* #menuSearch{
+  width: 800px;
+  left:200px;
+  height: 100px;
+  background-color:rgb(4, 227, 243);
+  position: relative;
+  top: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+} */
+
+#searchProduct{
+  position: relative;
+  top: 100px;
+}
+
+#listMenu{
+    display:flex;
+  width: 800px;
+  left:200px;
+  border:2px solid rgb(4, 227, 243);
+  background: linear-gradient(rgb(0, 238, 255), rgb(10, 199, 189));
+  position: relative;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  box-sizing: border-box;
+  visibility: inherit;
+}
+
+ul#listMenu li{
+    list-style: none;
+    width:100%;
+    margin:0px 0px;
+    text-align:center;
+    height:100px;
+    cursor: pointer;
+}
+ul#listMenu li:first-child{
+    border-top-left-radius: 100px;
+}
+ul#listMenu li:last-child{
+    border-top-right-radius: 100px;
+}
+ul#listMenu > li:hover{
+    background-color:aqua;
+}
+ul#listMenu > li>button{
+    background-color:transparent;
+    border: none;
+    position:relative;
+    top: 40px;
+    text-align:center;
+    font-size:16px;
+    font-family: serif;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+ 
+}
+
+/* search by title */
+#searchByTitle{
+    width: 100%;
+    position: relative;
+    height:100px;
+    background-color: #3fd0d4;
+    
+}
+
+
+#formSearchByTitle{
+  width:800px;
+  /* background-color:red; */
+  height:100px;
+  position: relative;
+  left:200px;
+  display: flex;
+}
+
+#formSearchByTitle > div > label {
+    font-size:18px;
+    color:white;
+}
+
+#formSearchByTitle > div{
+    margin:15px 29px;
+}
+
+#sanPham1{
+    width:200px;
+    height:40px;
+}
+#sanPham2{
+    width:150px;
+    height:40px;
+}
+#theLoai{
+    width:120px;
+    height:40px;
+}
+#clickSearch button{
+    margin:20px 0px;
+    color:rgb(4, 227, 243);
+    width:100px;
+    height:40px;
+    border-radius:30px;
+    cursor: pointer;
+}
+#clickSearch button:hover{
+    background-color:rgb(4, 229, 100);
+    color:white;
+}
+
+/* phần render sản phẩm */
+#renderProduct{
+    position: relative;
+    width: 100%;
+    height:500px;
+    /* background-color:red; */
+    top: 100px;
+    /* display: flex; */
+}
+
+#line1{
+    display: flex;
+    position: relative;
+    /* left:125px */
+}
+
+#line1 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+    cursor: pointer;
+}
+
+#line2{
+    display: flex;
+    position: relative;
+    /* left:125px */
+}
+
+#line2 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+    cursor: pointer;
+}
+
+#line2 #product1:hover{
+    transform: translateY(1px);
+}
+/* Sữa tươi */
+#line3{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+#line3 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+}
+/* Bnahs sữa */
+#line4{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+#line4 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+}
+/* bánh sữa */
+
+#line5{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+#line5 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+    cursor: pointer;
+}
+/* caramen */
+#line6{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+#line6 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+}
+/* trà sữa */
+#line7{
+    display: flex;
+    position: relative;
+    
+}
+
+#line7 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+    cursor: pointer;
+}
+
+/* kem */
+
+#line8{
+    display: flex;
+    position: relative;
+    /* left:125px */
+}
+
+#line8 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+    cursor: pointer;
+}
+
+#CategorySearch1{
+    display: flex;
+    position: relative;
+    /* left:125px */
+}
+
+#CategorySearch1 #product1{
+    margin:10px 20px;
+    position: relative;
+    left:120px;
+    cursor: pointer;
+}
+
+
+#product1{
+    width:200px;
+    height:300px;
+    background-color:rgb(32, 174, 184);
+    border:2px solid rgb(9, 141, 158);
+    box-shadow: 2px 5px 5px black;
+}
+#product1:hover{
+    transform:translateY(2px)
+}
+#imgproduct img{
+    width:200px;
+    height:200px;
+}
+#nameProduct{
+    width:180px;
+    text-align:center;
+    color:white;
+    font-weight:bold;
+    font-size: 15px;
+    margin:0px 8px
+}
+#priceProduct{
+    width:180px;
+    display: flex;
+    justify-content: space-between;
+    margin:0px 7px;
+    position:absolute;
+    top: 240px;
+    
+}
+#price{
+    color:red;font-weight:bold;
+}
+#seller{
+    color: rgb(138, 66, 54);
+    font-weight:bold;
+}
+#sellProduct{
+    margin:10px 10px;
+}
+#sellProduct button{
+    width:180px;
+    background-color:white;
+    color:#3fd0d4;
+    font-weight:bold;
+    height:25px;
+    cursor: pointer;
+    position:absolute;
+    top: 266px;
+    font-size: 15px;
+    border:none;
+}
+
+#sellProduct button:hover{
+    background-color:rgb(34, 53, 59);
+    color:white;
+}
+
+#errorProduct{
+    position: relative;
+    left:500px;
+    top: 20px;
+    font-size:20px;
+    color:red;
+    font-weight:bold;
+}

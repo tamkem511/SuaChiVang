@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="movablePart.css">
+    <link rel="stylesheet" href="trangChu.css">
+    <link rel="stylesheet" href="saleProduct.css">
+    <link rel="stylesheet" href="comment.css">
+    <link rel="stylesheet" href="product.css">
+    <script rel="stylesheet" type="text/javascript" src="comment.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="saleProduct.js"></script>
+    <link rel="stylesheet" href="searchAndRenderProduct.css">
+    <script type="text/javascript" src="searchAndRenderProduct.js"></script>
+    <script src="trangChu.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+</head>
+<body>
+
+    <div id="menuCategorySearch">
+        <ul id="listMenuSearch">
+            <!-- video giới thiệ cửa hàng -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#banner">
+                    Introduce
+                </a>
+            </li>
+            <!-- tìm kiếm sản phẩm -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#searchProduct">
+                    Search Product
+                </a>
+            </li>
+           
+            <!-- sản phẩm sale -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#saleProduct">
+                    Product Sale
+                </a>
+            </li>
+            <!-- sản phẩm bán chạy nhất -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#listProductFastSell">
+                    Fast Product
+                </a>
+            </li>
+            <!-- phẩn thông tin cửa hàng và người dùng -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#infoProduct_user">
+                    Infomation
+                </a>
+            </li>
+            <!-- Phần comment -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#createComment">
+                    Comments
+                </a>
+            </li>
+            <!-- Phần đặt hanghf với số lượng lớn -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#formDangKy">
+                    Order Product
+                </a>
+            </li>
+            <!-- Phần kết nối và địa chỉ cửa hàng -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#footer">
+                    Address
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <header>
+        <div id="logoShop">
+            <img src="icons/logo.jpg">
+            <h3>MILK</h3>
+        </div>
+
+        <div id="nameShop">
+            <h1>SỮA CHỊ VÀNG</h1>
+        </div>
+
+        <div id="account_lastSearch">
+            <div id="account">
+                <button id="myLogo" onclick="Account()">
+                    <img src="icons/user-circle.png" id="avata">
+                </button>
+
+                <div id="formAccount">
+                    <div id="formAccountBack">
+                        <button onclick="backFromAccount()">
+                            <i class="fa fa-backward"></i>
+                            <sanp>Quay Lại </sanp>
+                        </button>
+                    </div>
+                    <hr>
+                    <div id="changeName">
+                        <button onclick="ChangeName()">
+                            <i class="fa fa-file-signature"></i>
+                            <span>Thay Đổi Tên Đăng Nhập</span>
+                        </button>
+
+                        <div id="changeNameRender">
+                            <h3>Thay Đổi Tên Đăng Nhập</h3>
+                            <div id="formChangeName">
+                                <label>Vui Lòng Nhập Mật Khẩu</label><br>
+                                <input type="text" id="examPassword" placeholder="Nhập Mật Khẩu Để Xác Nhận">
+                                <span id="errorExamPassword"></span>
+                                <br>
+                                <label>Tên Mới</label><br>
+                                <input type="text" id="newName" placeholder="Tên Đăng Nhập Của Bạn">
+                                <span id="errorNewName"></span>
+                                <br>
+                            </div>
+                            
+                            <div id="confirm_or_cancel">
+                                <button id="confirmChangeName" onclick="ConfirmChangeName()">Xác Nhận</button>
+                                <button id="cancelChangeName" onclick="CancelChangeName()">Hủy Bỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="changeLogo">
+                        <button onclick="ChangeLogo()">
+                            <i class="fa fa-user-astronaut"></i>
+                            <span>Thay Đổi Ảnh Đại Diện</span>
+                        </button>
+                        
+                        <div id="chooseLogo">
+                            <h3 style="text-align:center">Thay Đổi Ảnh Đại Diện</h3>
+                            <input type="file" id="valueFile" onchange="chooseFile(this)"
+                             accept="image/gif, image/jpeg, image/png"
+                            >
+                            <button id="cancelChangeLogo" onclick="CancelChangeLogo()">Hủy Bỏ</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="logOut">
+                        <button onclick="renderFormChangePassword()">
+                            <i class="fa fa-key"></i>
+                            <span>Thay Đổi Mật Khẩu</span>
+                        </button>
+
+                        <div id="changePassword">
+                            <h3 style="text-align:center">Thay Đổi Mật Khẩu</h3>
+                            <div id="formChangePass">
+                                <h4>Nhập Mật Khẩu Hiện Tại</h4>
+                                <input type="text" id="oldPass" placeholder="Nhập Mật Khẩu Hiện Tại">
+                                <br>
+                                <span id="errorExamChangePassword"></span>
+                                <br>
+                                <h4>Nhập Mật Khẩu Mới</h4>
+                                <input type="text" id="newPass" placeholder="Nhập Mật Khẩu Mới">
+                                <br>
+                                <span id="errorNewPassword"></span>
+                            </div>
+
+                            <div id="confirm_or_cancel">
+                                <button onclick="ConfirmChangePassword()">Xác Nhận</button>
+                                <button onclick="CancelChangePassword()">Hủy Bỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="logOut">
+                        <button onclick="LogOut()">
+                            <span>Đăng Xuất</span> 
+                        </button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div id="lightMode">
+                <button id="clickLM" onclick="changeLight()">
+                    <i class="fa fa-moon" id="iconsMoon"></i>
+                </button>
+            </div>
+            <div id="lastSearch">
+                <button id="menuIcons" onclick="menuIcons()">
+                    <i class="fa fa-bars"></i>
+                    <!-- <i class="fa fa-angle-left"></i> -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Phần hiển thị sản phẩm -->
+
+   
+<div id="nextPageSellproduct">
+    <div id="webb">
+        <div id="contentProduct">
+            <button id="prevSellProduct" onclick="prevSellProduct()">
+                <i class="fa fa-angle-left"></i>
+                <i class="fa fa-angle-left"></i>
+            </button>
+              
+            <div id="imgProduct">
+                    
+                <div id="imgRender">
+                    <img src="products/bánh sữa non.jpg" id="big_img" onclick="renderIMGMain()">
+                </div>
+            
+                <div id="imgOther">
+                    <img src="img/bánh sữa non.jpg" alt=""  id="renderImg1" onclick="renderIMG1()">
+                    <img src="img/sữa chua nha đam size nhỏ.jpg" alt="" id="renderImg2" onclick="renderIMG2()">
+                    <img src="img/bánh sữa nhân phô mai.jpg" id="renderImg3" onclick="renderIMG3()">
+                    <img src="img/sữa tươi bò.jpg" alt="" id="renderImg4" onclick="renderIMG4()">
+                </div>
+            
+                <div id="share_follow">
+                    <div id="share">
+                        <span>Chia Sẻ : </span>
+                            <a href="https://www.facebook.com/">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.messenger.com/">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                            <a href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://mail.google.com/mail/u/0/#inbox">
+                                <i class="fas fa-mail-bulk"></i>
+                            </a>
+                        </div>
+                        <hr>
+                        <div id="follow">
+                            <i class="far fa-heart"></i>
+                            <span>Đã Thích : 2k</span>
+                        </div>    
+                    </div>        
+                </div>
+        
+                <!-- Phần thông tin đặt hàng -->
+                <div id="infosellProduct">
+                    <!-- Tên Sản Phẩm -->
+                    <div id="nameProductSell">
+                        
+                    </div>
+                    <!-- Đánh Giá -->
+                    <div id="evaluate">
+                        <div id="evaluate_star">
+                            <span>2.7</span>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <hr>
+                        <div id="danhgia">
+                            <span>3</span>
+                            <span>Đánh Giá</span>
+                        </div>
+                        <hr>
+                        <div id="daban">
+                            <span>1.2k</span>
+                            <span>Đã Bán</span>
+                        </div>
+                    </div>
+                    <!-- giá và số lượng -->
+                    <div id="price_quantity">
+                        <div>
+                            <span id="price_Product"></span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span>Số Lượng : </span>
+                            <span style="font-weight:bold;">1,2k</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <span style="font-weight:bold;">50%</span>
+                            <span>GIẢM</span>
+                        </div>
+                    </div>
+                    <!-- thông tin sản phảm -->
+                    <div id="productInformation">
+                        <table border="0" cellspacing="20" cellpadding="0">
+                            <tr>
+                                <td>Deal Sốc</td>
+                                <td>
+                                    Mua Kèm Deal Sốc
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>Vận Chuyện Tới </td>
+                                <td>
+                                    <input type="text" id="addressClient" placeholder="Đồng Thịnh - Minh Đài - Tân Sơn - Phú Thọ">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Số Điện Thoại </td>
+                                <td>
+                                    <input type="number" id="phoneOfClient" placeholder="Số Điện Thoại">
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>Phí Vận Chuyển </td>
+                                <td>23.000đ</td>
+                            </tr>
+        
+                            <tr>
+                                <td>Hình Thức</td>
+                                <td>
+                                  <form name="packing">
+                                    <input type="radio" name="packing_form" value="Đóng Hộp"> Đóng Hộp <br>
+                                    <input type="radio" name="packing_form" value = "Đóng Gói"> Đóng Gói <br>
+                                    <input type="radio" name="packing_form" value="Đóng Kiện"> Đóng Kiện
+                                  </form>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>Số Lượng</td>
+                                <td>
+                                    <input type="number" value="1" style="width:50px" id="so_luong">
+                                    <span>3000 sản phẩm có sẵn</span>
+                                </td>
+                            </tr>     
+                        </table>
+                    </div>
+                    <hr>
+                    <div id="confirmSell">
+                        <button id="add_cart" onclick="addCart()">
+                            Thêm Vào Giỏ Hàng
+                        </button>
+                        
+                        <button id="confirmProduct" onclick="confirmSellProduct()" value="0">
+                            Mua Hàng
+                        </button>
+                   </div>
+                    <!-- bảo hành -->
+                    <div id="insurance">
+                        <div>
+                            <span>Shop Đảm Bảo : </span>
+                        </div>
+                        <div>
+                            <span>3 Ngày Trả Hàng / Hoàn Tiền</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <!-- Phần chủ của hàng -->
+        <div id="infomation_shop">
+            <div id="employee">
+                <div id="logo_shop">
+                    <img src="img/chi-vang-ba-vi-a-1434.jpg">
+                </div>
+                <div id="status_shop">
+                    <div id="shop_name">
+                        Sữa Chị Vàng
+                    </div>
+                    <div id="time_active">
+                        Online 25 Phút Trước
+                    </div>
+                    <div id="chat">
+                        <button onclick="chatNow()">
+                            <i class="fas fa-sms"></i>
+                            <div>Chát Ngay</div>
+                        </button>
+                        
+                        <div id="chat_now">
+                            <div id="titleChatNow">
+                                <div id="imgChatNow">
+                                    <img src="icons/logo.jpg">
+                                </div>
+
+                                <div id="nameChatNow-status">
+                                    <div id="nameChatNow">
+                                        <h5>Sữa Chị Vàng</h5>
+                                    </div>
+                                    <div id="stausChatNow">
+                                        <span>Đang hoạt động</span>
+                                    </div>
+                                </div>
+
+                                <div id="callChatNow">
+                                    <i class="fa fa-camera"></i>
+                                    <i class="fa fa-phone"></i>
+                                    <button id="timeFormChatNow" onclick="timeFormChatNow()">X</button>
+                                </div>
+                            </div>
+
+                            <div id="renderChatNow">
+                                <span id="renderMessage"></span>
+                            </div>
+
+                            <div id="enter-send_ChatNow">
+                                <div id="enterChatNow">
+                                    <input type="text" id="message" placeholder="Nhập ...">
+                                </div>
+                                <div id="sendChatNow">
+                                    <button id="clickSend" onclick="clickSend()">
+                                        <i class="fa fa-share"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+         
+            <hr>
+             <div id="rate_feedback">
+                 <table border="0" cellspacing="20">
+                     <tr>
+                         <td id="title_rate">
+                             <span style="color:black">Đánh Giá : </span>
+                             <span>9</span>
+                         </td>
+                         <td id="title_rate">
+                            <span>Tỷ Lệ Phản Hồi :</span>
+                            <span> 62%</span>
+                         </td>
+                         <td id="title_rate">
+                            <span>Thành Lập : </span>
+                            <span>10 năm</span>
+                         </td>
+                     </tr>
+        
+        
+                     <tr>
+                        <td id="title_rate">
+                            <span style="color:black">Sản Phẩm : </span>
+                            <span>24</span>
+                        </td>
+                        <td id="title_rate">
+                           <span>Thời Gian Phản Hồi : </span>
+                           <span>Trong Vài Phút</span>
+                        </td>
+                        <td id="title_rate">
+                           <span>Người Tham Gia : </span>
+                           <span>12 Nghìn Người</span>
+                        </td>
+                     </tr>
+                 </table>
+             </div>
+        </div>
+        
+        <!-- Phần Đánh Giá sản phẩm -->
+        
+        <div id="footerProduct">
+            <hr>
+            <ul class="infoShop">
+                <li class="footer footer-line1">
+                    <h2>Thông Tin Liên Hệ</h2>
+                   <!-- <div>
+                       <div>Hotline : 0397127215</div>
+                       <div>Zalo : Tâm Phạm</div>
+                       <div>Facebook : Phạm Tiến Tâm</div>
+                   </div> -->
+                   <div>
+                       Trụ sở chính tại Hà Nội : Tòa Rice 
+                       City - KĐT Tây Nam Linh Đàm - Hoàng Mai 
+                       - Hà Nội
+                       <div>Hotline : 0397127215</div>
+                       <div>Zalo : Tâm Phạm</div>
+                       <div>Facebook : Phạm Tiến Tâm</div>
+                   </div>
+                </li>
+
+                <li class="footer footer-line2">
+                   <h2>Thành Lập Doanh Nghiệp</h2>
+                   <div>
+                    Dịch vụ thành lập công ty cổ phần
+                    Thành lập công ty TNHH 1 thành viên
+                    Thành lập công ty TNHH 2 thành viên
+                    Dịch vụ thành lập chi nhánh công ty
+                    Dịch vụ thành lập địa điểm kinh doanh
+                    Thành lập công ty tại Hà Nam
+                    Thành lập công ty tại Hưng Yên
+                    Thành lập công ty tại Bắc Ninh
+                   </div>
+                </li>
+
+                <li class="footer footer-line3">
+                    <h2>Thay Đổi Nội Dung ĐKKD</h2>
+                    <div>
+                        Dịch vụ tăng vốn điều lệ công ty
+                        Bổ sung ngành nghề kinh doanh
+                        Dịch vụ thay đổi đăng ký kinh doanh
+                        Dịch vụ thay đổi tên công ty
+                        Dịch vụ thay đổi địa chỉ công ty
+                        Thay đổi người đại diện pháp luật
+                        Dịch vụ thay đổi thành viên
+                        Thành lập công ty tại Vĩnh Phúc
+                    </div>
+                </li>
+
+                <li class="footer footer-line4">
+                   <h2>Dịch Vụ Khác</h2>
+                   <div>
+                        Dịch vụ xin cấp giấy phép con
+                        Dịch vụ làm lại con dấu
+                        Dịch vụ giải thể công ty
+                        Dịch vụ làm báo cáo tài chính
+                        Dịch vụ kiểm toán
+                        Dịch vụ kế toán thuế
+                        Đào tạo kế toán trưởng doanh nghiệp
+                        Thành lập công ty tại Nam Định
+                   </div>
+                </li>
+            </ul>
+            <hr>
+        <hr class="ngan_cach">
+        <h3 class="end2">Copyright © Phạm Tiến Tâm</h3>
+        </div>
+    </div>        
+  </div>
+
+
+</div>
+     
+
+    <!-- phần trên cố định -->
+    <div id="fixedPart">
+         <!-- Phần header -->
+        
+
+         <!-- Phần banner -->
+        <div id="banner">
+            <video width="100%" height="500px" autoplay loop>
+                 <source src="video/Sữa Chị Vàng Ba Vì.webm">    
+            </video>
+
+            <div id="SocialNetwork">
+                <br><br>
+                <a href="#">
+                    <button type="" onclick="offMusic()">
+                        <i class="fa fa-headphones"></i>
+                    </button>
+               </a><br><br>
+                <a href="https://www.instagram.com/tam.phamtien.904/">
+                    <button type="">
+                        <i class="fab fa-instagram" id="network"></i>
+                    </button>
+                </a><br><br>
+                <a href="https://www.facebook.com/tam.phamtien.904">
+                    <button type="">
+                        <i class="fab fa-facebook-f" id="networks"></i>
+                    </button>
+                </a><br><br>
+                <a href="https://twitter.com/">
+                    <button type="">
+                        <i class="fab fa-twitter" id="networkss"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+         <!-- phần tìm kiếm sản phẩm -->
+        <div id="searchProduct">
+            <!-- phần menu -->
+            <div id="menuSearch">
+                <ul id="listMenu">
+                    <li id="suaChua" onclick="SuaChua()">
+                        <button type="">
+                            <i class="fa fa-box"></i>
+                            Sữa Chua
+                        </button>
+                    </li>
+                    
+                    <li id="suaTuoi" onclick="SuaTuoi()">
+                        <button type="">
+                            <i class="fa fa-prescription-bottle"></i>
+                            Sữa Tươi
+                        </button>
+                    </li>
+                    
+                    <li id="banhSua" onclick="BanhSua()">
+                        <button type="">
+                            <i class="fas fa-cookie"></i>
+                            Bánh Sữa
+                        </button>
+                    </li>
+                    
+                    <li id="caramen" onclick="Caramen()">
+                        <button type="">
+                            <i class="fa fa-stroopwafel"></i>
+                            Caramen
+                        </button>
+                    </li>
+                    
+                    <li id="traSua" onclick="TraSua()">
+                        <button type="">
+                            <i class="fa fa-prescription-bottle"></i>
+                            Trà Sữa
+                        </button>
+                    </li>
+                    
+                    <li id="kem" onclick="Kem()">
+                        <button type="">
+                            <i class="fa fa-ice-cream"></i>
+                            Kem 
+                        </button>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- Phần tìm kiếm nhanh -->
+            <div id="searchByTitle">
+                <div id="formSearchByTitle">
+                    <!-- tìm kiếm theo sản phẩm -->
+                    <div id="searchByProduct">
+                        <label id="">Sản Phẩm 1</label>
+                        <br>
+                        <select id="sanPham1" name = "Sản Phẩm">
+                            <option value="">Sữa Chua</option>
+                            <option value="">Sữa Tươi</option>
+                            <option value="">Bánh Sữa</option>                    
+                            <option value="">Trà Sữa</option>
+                        </select>
+                    </div>
+
+                    <!-- tìm kiếm theo loại -->
+                    <div id="searchType">
+                        <label id="">Sản Phẩm 2</label>
+                        <br>
+                        <select id="sanPham2" name = "Sản Phẩm">
+                            <option value="">Sữa Chua</option>
+                            <option value="">Sữa Tươi</option>
+                            <option value="">Bánh Sữa</option>                    
+                            <option value="">Trà Sữa</option>
+                        </select>
+                    </div>
+
+                    <!-- tìm kiếm theo thể loại -->
+                    <div id="searchCategory">
+                        <label id="">Thể Loại</label>
+                        <br>
+                        <select id="theLoai" name = "Sản Phẩm">
+                            <option value="">ComBo</option>
+                       </select>
+                    </div>
+
+                    <!-- tìm kiếm -->
+                    <div id="clickSearch">
+                        <button onclick="searchCategory()">SEARCH...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Phần hiển thị sản phẩm -->
+        <div id="renderProduct">
+            <!-- line 1 và line 2 hiển thị sữa chua -->
+            <!-- line1 -->
+            <div id="line1"></div>
+
+            <!-- Line 2 -->
+            <div id="line2"></div>
+
+            <!-- line3 hiển thị sữa tươi-->
+            <div id="line3"></div>
+
+            <!-- line 4 hiển thị bánh sữa -->
+            <div id="line4"></div>
+
+            <!-- line 5 hiển thị bánh sữa -->
+            <div id="line5"></div>
+
+            <!-- line 6 hiển thị caramen -->
+            <div id="line6"></div>
+
+            <!-- line 7 hiển thị trà sữa -->
+            <div id="line7"></div>
+
+            <!-- line 8 hiển thị kem -->
+            <div id="line8"></div>
+
+            <!-- CategorySearch1 -->
+            <div id="CategorySearch1"></div>
+         </div>
+
+         
+    </div>
+
+     <!-- phần dưới có thể di chuyển khi hiển thị sản phầm -->
+    <div id="movablePart">
+         <!-- phần sản phẩm được sale -->
+        <div id="saleProduct">
+            <div id="coutdowwn">
+                <div id="lastMinute">
+                    <h2>LAST MINUTE !</h2>
+                </div>
+                <div id="evenSale">
+                    <h1>Lunar New Year</h1>
+                </div>
+                <div id="time">
+                    <div id="daysAndHours">
+                        <div id="Days">
+                            <div id="renderDay"></div>
+                            <div>Days</div>
+                        </div>
+                        <div id="Hours">
+                            <div id="renderHours"></div>
+                            
+                            <div>Hours</div>
+                        </div>
+                    </div>
+                    <div id="minuteAndSeconds">
+                        <div id="Minutes">
+                            <div id="renderMinute"></div>
+                            <!-- <br> -->
+                            <div>Minutes</div>
+                        </div>
+                        <div id="Seconds">
+                            <div id="renderSeconds"></div>
+                            <!-- <br> -->
+                            <div>Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="yearEvent">
+                    <span>Happy New Year 2022</span>
+                </div>
+            </div>
+            <div id="listProductSale">
+                <div id="imgProductSale">
+                    <img src="img/combo 5 chai trà sữa.jpg" alt="">
+                </div>
+                <div id="infoProductSale">
+                    <div id="Brand">
+                        <h2>Sữa Chị Vàng</h2>
+                    </div>
+                    <div id="nameBrandSale">
+                        <h3>Combo 5 chai sữa chua hoa quả</h3>
+                    </div>
+                    <div id="infoBrandName">
+                        <h4>Sản phẩm sữa chua hoa quả với 5 vị khác nhau, hương vị trái cây thơm ngon mát lành</h4>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+         <!-- Phần sản phẩm sữa được bạn chạy nhất -->
+        <div id="lastSellProduct">
+            <!-- title sản phẩm bán chạy nhất -->
+            <div id="titleProductFastSell">
+                <div>
+                    <h4 id="lightSCV">Sữa Chị Vàng</h4>
+                </div>
+                <div>
+                    <h1>Sản Phẩm Bán Chạy Nhất</h1>
+                </div>
+                <div>
+                    <h5>Dưới đây là những sản phẩm bán chạy nhất tại cửa hàng Sữa Chị Vàng mời quý vị tham khảo và mua sản phẩm</h5>
+                </div>
+            </div>
+
+            <!-- list sản phẩm bán chạy nhất -->
+            <div id="listProductFastSell">
+
+                
+            </div>
+
+            <!-- đếm slide -->
+            <div id="countSlide">
+                <button id="slide1" onclick="Slide1()"></button>
+                <button id="slide2" onclick="Slide2()"></button>
+                <button id="slide3" onclick="Slide3()"></button>
+                <button id="slide4" onclick="Slide4()"></button>
+                <button id="slide4" onclick="Slide5()"></button>
+                <button id="slide4" onclick="Slide6()"></button>
+            </div>
+
+            <div id="next_back">
+                <button id="nextSlide" onclick="NextSlide()">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+                <button id="backSlide" onclick="BackSlide()">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+            </div>
+        </div>
+
+         <!-- Phần thông tin về người dùng và chi tiết các sản phầm-->
+        <div id="infoProduct_user">
+            <div id="sumProduct">
+                <div>
+                    110
+                </div>
+                <div>
+                    <h2>Sản Phẩm</h2>
+                </div>
+            </div>
+
+            <div id="sumUser">
+                <div>
+                    1530
+                </div>
+                <div>
+                    <h2>Người Dùng</h2>
+                </div>
+            </div>
+
+            <div id="productSeller">
+                <div>
+                    98.777
+                </div>
+                <div>
+                    <h2>Đã Bán</h2>
+                </div>
+            </div>
+
+            <div id="product_quality">
+                <div>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div>
+                    <h2>Chất Lượng</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="titleProductComment">
+            <div>
+                <h4 id="lightSCV2">Sữa Chị Vàng</h4>
+            </div>
+            <div>
+                <h1>Những Góp Ý Của Khách Hàng</h1>
+            </div>
+            <div>
+                <h5>Dưới đây là những Góp Ý Của Khách Hàng Cho Sữa Chị Vàng</h5>
+            </div>
+        </div>
+
+         <!-- thêm commnet của khách hàng -->
+        <div id="createComment">
+                <!-- nextx và back slider -->
+                <div id="next_back-Slider">
+                    <button onclick="prevSlider()"><i class="fa fa-angle-left"></i></button>
+                    <button  onclick="nextSlider()"><i class="fa fa-angle-right"></i></button>
+                </div>
+                <!-- hiển thị hình ảnh -->
+                
+                <div id="renderSlider">
+                    <div id="slideMain">
+        
+                    </div>
+                </div>
+
+                <!-- viết nd comment -->
+                <div id="addContentComment">
+                     <img src="https://i.pinimg.com/736x/bf/bc/5b/bfbc5b2181cedb6c68f357823c20f806.jpg">
+
+                     <div id="urlIMG">
+                         <div id="titleAddComment">
+                             <h3>CREATE A COMMENT</h3>
+                         </div>
+
+                         <div id="linkIMG">
+                             <input type="text" id="link" placeholder="URL image ...">
+                         </div>
+                     </div>
+
+                     <div id="name_and_comment">
+                         <div id="nameClient">
+                             <div id="enterName">
+                                 <input type="text" id="enterYourName" placeholder="Your Name">
+                             </div>
+                             <div id="timeEnterComment">
+                                 22 October, 2002
+                             </div>
+                         </div>
+                         <div id="bodyCommentByClient">
+                             <textarea placeholder="Comment ..." id="enterComment"></textarea>
+                         </div>
+                         <div id="sendComment">
+                             <button type="" onclick="sendComment()">Send</button>
+                         </div>
+                     </div>
+                </div>
+
+        </div>
+
+         <!-- Phần nếu khách hàng muốn đặt hàng với số lượng lớn -->
+        <div id="sellProduct_byBulk">
+            <div id="titlesellProduct_byBulk">
+                <div>
+                    <h4 id="lightSCV2">Sữa Chị Vàng</h4>
+                </div>
+                <div>
+                    <h1>Nếu Bạn Muốn Đặt Hàng Với Số Lượng Lớn</h1>
+                </div>
+                <div>
+                    <h5>Dưới đây Form Đăng Ký Để Khách Hàng Muốn Đặt Với Số Lượng Lớn</h5>
+                </div>
+            </div>
+
+            <div id="formDangKy">
+                <div id="table1"></div>
+
+                <div id="table2">
+                    <div id="formOrder">
+                        <div>
+                            <h2>Để Lại Thông Tin Đặt Hàng</h2>
+                        </div>
+                        <div id="first_last-Name">
+                            <input type="text" placeholder="First Name" id="firstName">
+                            <input type="text" placeholder="Last Name" id="lastName">
+                        </div>
+                        <div  id="email_mobiphone">
+                            <input type="text" placeholder="Email" id="emailOrder">
+                            <input type="text" placeholder="Phone" id="phone">
+                        </div>
+                        <div id="brand_amount">
+                            <input type="text" placeholder="Product Order" id="productOrder">
+                            <input type="text" placeholder="Amount Order" id="amountOrder">
+                        </div>
+                        <div id="order">
+                            <button onclick="order()">Đặt Hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="table3">
+                    <div id="address">
+                        <div>
+                            <i class="fa fa-address-card"></i>
+                        </div>
+                        <div>
+                            <h3>Việt Long - Tản Lĩnh - Sơn Tây - Hà Nội</h3>
+                        </div>
+                    </div>
+
+                    <div id="accountEmail">
+                        <div><i class="fa fa-envelope-open-text"></i></div>
+                        <div>
+                            <h3>Tamkem5112002@gmail.com</h3>
+                        </div>
+                    </div>
+
+                    <div id="telephone">
+                        <div>
+                            <i class="fa fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <h3>0397127215</h3>
+                        </div>
+                    </div>
+
+                    <div id="linkNetwork">
+                        <div>
+                            <a href="https://www.facebook.com/CongtycophansuaChiVangBaVi">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.tiktok.com/">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="table4">
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <footer id="footer">
+               <div id="column1">
+                   <div>
+                        <div>
+                            <i class="fa fa-fill-drip"></i>
+                        </div>
+                        <div>
+                            <h3>MILK</h3>
+                        </div>
+                   </div>
+                       
+                   <div>
+                    Tags: 0108936877, CÔNG TY CỔ PHẦN SỮA CHỊ VÀNG BA VÌ,
+                    Thành phố Hà Nội, Thành phố Hà Nội ngày 08/10/2019,
+                    Thành phố Hà Nội tháng 10/2019, Thành phố Hà Nội
+                    năm 2019, Huyện Ba Vì, Huyện Ba Vì, Thành phố Hà
+                    Nội ngày 08/10/2019, Huyện Ba Vì, Thành phố Hà
+                    Nội tháng 10/2019, Huyện Ba Vì, Thành phố Hà
+                    Nội năm 2019, Xã Tản Lĩnh, CHI VANG BA VI MILK
+                    JOINT STOCK COMPANY, Phạm Thị Thanh Huyền,
+                   
+                   </div>
+               </div>
+
+               <div id="column2">
+                   <div>Connect With Us</div>
+                   <div>SOCIAL MEDIA CHANNELS</div>
+                   <div>
+                        <div>
+                            <a href="https://www.facebook.com/CongtycophansuaChiVangBaVi">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.tiktok.com/">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://twitter.com/">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                   </div>
+               </div>
+
+               <div id="column3">
+                   <div>Newsletter</div>
+                   <div>SIGN UP FOR SPECIAL OFFERS</div>
+                   <div>
+                       <input type="text" placeholder="Email">
+                   </div>
+               </div>
+        </footer>
+
+        <div id="copyBy">
+            <h3>Copy Right By Phạm Tiến Tâm</h3>
+        </div>
+    </div>
+</body>
+</html>

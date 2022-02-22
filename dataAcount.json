@@ -1,0 +1,151 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "username": "Pham Tat Thanh",
+      "password": "Thanhpham1979@"
+    },
+    {
+      "username": "Pham Tien Tam",
+      "password": "Tamkem511@",
+      "id": 2
+    },
+    {
+      "username": "Khuat Huu Dat",
+      "password": "Huudat11@",
+      "id": 3
+    },
+    {
+      "username": "Vu Minh Quan",
+      "password": "Vuquan2005@",
+      "id": 4
+    },
+    {
+      "username": "Tam Kem Pham",
+      "password": "Tientamjr511!@",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "nameClient": "BigDaddy",
+      "cmt": "Sữa của shop ngon lắm mọi người ạ,hàng giao không bị méo mó gì và ăn rất dảm bảo chất lượng",
+      "time": "13 November,2022",
+      "like": 1147,
+      "img": "<img src='client/bigDaddy.jpg' >"
+    },
+    {
+      "id": 2,
+      "nameClient": "Binz",
+      "cmt": "Sản phẩm sữa chia mic vị ăn rất ngon và không bị nhàm chán,rất mong sản phảm có thể phát triển thêm",
+      "time": "13 December,2022",
+      "like": 5146,
+      "img": "<img src='client/binz.jpg' >"
+    },
+    {
+      "id": 3,
+      "nameClient": "Chau Khai Phong",
+      "cmt": "Chưa nói về sữa,trang web của shop rất đẹp và hiện đại giúp khách hàng tha hồ lựa chọn sản phẩm ",
+      "time": "18 November,2022",
+      "like": 946,
+      "img": "<img src='client/chau khai phong.jpg' >"
+    },
+    {
+      "id": 4,
+      "nameClient": "Dam vinh Hung",
+      "cmt": "Mong shop có thêm nhiều ưu đãi sản phẩm combo hơn,sản phẩm rất chất lượng",
+      "time": "1 November,2022",
+      "like": "1085",
+      "img": "<img src='client/dam vinh hung.jpg' >"
+    },
+    {
+      "id": 5,
+      "nameClient": "De Choat",
+      "cmt": "Hộp sữa chua ăn xong mình có thể làm dc rất nhiều vật dụng trong nhà bếp nha",
+      "time": "13 November,2022",
+      "like": 1210,
+      "img": "<img src='client/DC.jpg' >"
+    },
+    {
+      "id": 6,
+      "nameClient": "Du Thien",
+      "cmt": "Sữa rất ngon không chỉ để ăn tráng miệng mà còn giúp tiêu hóa rất tốt",
+      "time": "13 October,2022",
+      "like": "1111",
+      "img": "<img src='client/du thien.jpg' >"
+    },
+    {
+      "id": 7,
+      "nameClient": "Ho Quang Hieu",
+      "cmt": "Sản phẩm tuyệt vời, mong của hàng phát triển thêm nhiều loại mới hơn ạ",
+      "time": "13 November,2022",
+      "like": 908,
+      "img": "<img src='client/ho quang hieu.jpg' >"
+    },
+    {
+      "id": 8,
+      "nameClient": "Karik",
+      "cmt": "Chắc sau mình phải đặt nhiều hơn ,mua về chưa kịp ăn con mình đã đánh sạch :((",
+      "time": "13 November,2022",
+      "like": "789",
+      "img": "<img src='client/karik.jpg' >"
+    },
+    {
+      "id": 9,
+      "nameClient": "MCK",
+      "cmt": "Sữa bò uống rất ngon nha,và chgo trẻ uống sớm có thể giúp tăng chiều cao được",
+      "time": "28 July,2022",
+      "like": "563",
+      "img": "<img src='client/mck.jpg' >"
+    },
+    {
+      "id": 10,
+      "nameClient": "Noo Phuoc Thinh",
+      "cmt": "Mình ghiền nhất món bánh sữa, ăn không quá ngọt và rất ngon ăn mãi không chán hihi",
+      "time": "13 November,2022",
+      "like": "988",
+      "img": "<img src='client/noo.jpg' >"
+    },
+    {
+      "id": 11,
+      "nameClient": "Phi Nhung",
+      "cmt": "Là một ca sĩ nó giúp tôi thanh giọng rất tốt,và giúp tôi tiêu hóa tốt",
+      "time": "1 May,2022",
+      "like": "4578",
+      "img": "<img src='client/phi nhung.jpg' >"
+    },
+    {
+      "id": 12,
+      "nameClient": "Son Tung",
+      "cmt": "Sản phẩm rất tốt,và trang web cũng khá là bắt mắt chúc mừng shop",
+      "time": "11 November,2022",
+      "like": "7890",
+      "img": "<img src='client/son tung.jpg' >"
+    },
+    {
+      "id": 13,
+      "nameClient": "Thu Minh",
+      "cmt": "Shop có thể phát triển món trà sữa hơn nữa,vì nó uống rất ngon",
+      "time": "4 May,2022",
+      "like": "567",
+      "img": "<img src='client/thuminh.jpg' >"
+    },
+    {
+      "id": 14,
+      "nameClient": "Tran Thanh",
+      "cmt": "Sữa không chỉ ngon, mà còn rất tốt cho sức khỏe cảm ơn shop",
+      "time": "8 October,2022",
+      "like": "645",
+      "img": "<img src='client/tran thanh.png' >"
+    },
+    {
+      "id": 15,
+      "nameClient": "Wowy",
+      "cmt": "Sữa chua ngon quá trời owiii,tôi bị ghiền mất rồi :(((",
+      "time": "22 November,2022",
+      "like": "1123",
+      "img": "<img src='client/wowy.jpg'>"
+    }
+  ]
+}

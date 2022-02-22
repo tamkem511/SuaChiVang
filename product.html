@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận Mua Hàng</title>
+    <link src="homePage.html">
+    <script src="product.j"></script>
+    <script src="searchAndRenderProduct.js"></script>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+    <link rel="stylesheet" href="product.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+</head>
+<body onload="test()">
+    <div id="menuCategorySearch">
+        <ul id="listMenuSearch">
+            <!-- video giới thiệ cửa hàng -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#banner">
+                    Introduce
+                </a>
+            </li>
+            <!-- tìm kiếm sản phẩm -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#searchProduct">
+                    Search Product
+                </a>
+            </li>
+           
+            <!-- sản phẩm sale -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#saleProduct">
+                    Product Sale
+                </a>
+            </li>
+            <!-- sản phẩm bán chạy nhất -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#listProductFastSell">
+                    Fast Product
+                </a>
+            </li>
+            <!-- phẩn thông tin cửa hàng và người dùng -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#infoProduct_user">
+                    Infomation
+                </a>
+            </li>
+            <!-- Phần comment -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#createComment">
+                    Comments
+                </a>
+            </li>
+            <!-- Phần đặt hanghf với số lượng lớn -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#formDangKy">
+                    Order Product
+                </a>
+            </li>
+            <!-- Phần kết nối và địa chỉ cửa hàng -->
+            <li class="categorySearchMenu">
+                <a id="changeColorSearch" href="#footer">
+                    Address
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <header>
+        <div id="logoShop">
+            <img src="icons/logo.jpg">
+            <h3>MILK</h3>
+        </div>
+
+        <div id="nameShop">
+            <h1>SỮA CHỊ VÀNG</h1>
+        </div>
+
+        <div id="account_lastSearch">
+            <div id="account">
+                <button id="myLogo" onclick="Account()">
+                    <img src="icons/user-circle.png" id="avata">
+                </button>
+
+                <div id="formAccount">
+                    <div id="formAccountBack">
+                        <button onclick="backFromAccount()">
+                            <i class="fa fa-backward"></i>
+                            <sanp>Quay Lại </sanp>
+                        </button>
+                    </div>
+                    <hr>
+                    <div id="changeName">
+                        <button onclick="ChangeName()">
+                            <i class="fa fa-file-signature"></i>
+                            <span>Thay Đổi Tên Đăng Nhập</span>
+                        </button>
+
+                        <div id="changeNameRender">
+                            <h3>Thay Đổi Tên Đăng Nhập</h3>
+                            <div id="formChangeName">
+                                <label>Vui Lòng Nhập Mật Khẩu</label><br>
+                                <input type="text" id="examPassword" placeholder="Nhập Mật Khẩu Để Xác Nhận">
+                                <span id="errorExamPassword"></span>
+                                <br>
+                                <label>Tên Mới</label><br>
+                                <input type="text" id="newName" placeholder="Tên Đăng Nhập Của Bạn">
+                                <span id="errorNewName"></span>
+                                <br>
+                            </div>
+                            
+                            <div id="confirm_or_cancel">
+                                <button id="confirmChangeName" onclick="ConfirmChangeName()">Xác Nhận</button>
+                                <button id="cancelChangeName" onclick="CancelChangeName()">Hủy Bỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="changeLogo">
+                        <button onclick="ChangeLogo()">
+                            <i class="fa fa-user-astronaut"></i>
+                            <span>Thay Đổi Ảnh Đại Diện</span>
+                        </button>
+                        
+                        <div id="chooseLogo">
+                            <h3 style="text-align:center">Thay Đổi Ảnh Đại Diện</h3>
+                            <input type="file" id="valueFile" onchange="chooseFile(this)"
+                             accept="image/gif, image/jpeg, image/png"
+                            >
+                            <button id="cancelChangeLogo" onclick="CancelChangeLogo()">Hủy Bỏ</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="logOut">
+                        <button onclick="renderFormChangePassword()">
+                            <i class="fa fa-key"></i>
+                            <span>Thay Đổi Mật Khẩu</span>
+                        </button>
+
+                        <div id="changePassword">
+                            <h3 style="text-align:center">Thay Đổi Mật Khẩu</h3>
+                            <div id="formChangePass">
+                                <h4>Nhập Mật Khẩu Hiện Tại</h4>
+                                <input type="text" id="oldPass" placeholder="Nhập Mật Khẩu Hiện Tại">
+                                <br>
+                                <span id="errorExamChangePassword"></span>
+                                <br>
+                                <h4>Nhập Mật Khẩu Mới</h4>
+                                <input type="text" id="newPass" placeholder="Nhập Mật Khẩu Mới">
+                                <br>
+                                <span id="errorNewPassword"></span>
+                            </div>
+
+                            <div id="confirm_or_cancel">
+                                <button onclick="ConfirmChangePassword()">Xác Nhận</button>
+                                <button onclick="CancelChangePassword()">Hủy Bỏ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="logOut">
+                        <button onclick="LogOut()">
+                            <span>Đăng Xuất</span> 
+                        </button>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div id="lightMode">
+                <button id="clickLM" onclick="changeLight()">
+                    <i class="fa fa-moon" id="iconsMoon"></i>
+                </button>
+            </div>
+            <div id="lastSearch">
+                <button id="menuIcons" onclick="menuIcons()">
+                    <i class="fa fa-bars"></i>
+                    <!-- <i class="fa fa-angle-left"></i> -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+  
+            <div id="cart_product">
+            
+            
+            </div>
+
+    
+    
+     
+    </div>
+       
+</body>
+</html>

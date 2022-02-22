@@ -1,0 +1,375 @@
+@keyframes shake {
+    0% { transform: translate(5px, 5px) rotate(0deg); }
+    10% { transform: translate(-5px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(5px, -5px) rotate(1deg); }
+    50% { transform: translate(-5px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 5px) rotate(0deg); }
+    70% { transform: translate(3px, 5px) rotate(-1deg); }
+    80% { transform: translate(-5px, -5px) rotate(1deg); }
+    90% { transform: translate(5px, 2px) rotate(0deg); }
+    100% { transform: translate(5px, -2px) rotate(-1deg); }
+    
+  }
+
+  @keyframes leftSlide{
+    from{
+        left:0
+    }
+    to{
+        left:-200px;
+    }
+}
+#saleProduct{
+    display: flex;
+}
+#coutdowwn{
+    width:20%;
+    height: 500px;
+    background-color:#3fd0d4;
+}
+#listProductSale{
+    width:78%;
+    height: 400px;
+    background-color:palevioletred;
+    position: relative;
+    left:20px
+}
+#lastMinute{
+    text-align: center;
+    margin: 20px 0px;
+    color: white;
+    font-family: 'Satisfy', cursive;
+}
+#evenSale{
+    text-align: center;
+    color: white;
+}
+#time{
+    position: relative;
+    top: 5px;
+    left:20px;
+}
+#time div{
+    margin:10px 0px
+}
+
+#yearEvent{
+    position: absolute;
+    top: 400px;
+    left:25px;
+    background-color:white;
+    border-radius:20px;
+    height:30px;
+    border: red solid 1px;
+}
+#yearEvent span{
+    font-size:20px;
+    color:red;
+    font-weight:bold;
+    position: relative;
+    top: 3px;
+}
+
+#daysAndHours{
+    display: flex;
+    justify-content:space-around;
+}
+#minuteAndSeconds{
+    display: flex;
+    justify-content:space-around;
+}
+#Days{
+    display:block;
+}
+#renderDay{
+    font-size:35px;
+    font-weight:bold;
+    color:white;
+}
+#Hours{
+    display:block;
+}
+#renderHours{
+    font-size:35px;
+    font-weight:bold;
+    color:white;
+}
+#Minutes{
+    display:block;
+}
+#renderMinute{
+    font-size:35px;
+    font-weight:bold;
+    color:white;
+}
+#Seconds{
+    display:block;
+}
+#renderSeconds{
+    font-size:35px;
+    font-weight:bold;
+    color:white;
+    position: relative;
+}
+#daysAndHours > div > div:last-child{
+    font-size:25px;
+    font-weight:bold;
+    color:white;
+    position:relative;
+    left:-15px;
+}
+#minuteAndSeconds{
+    position: relative;
+    left:15px;
+}
+#minuteAndSeconds > div > div:last-child{
+    font-size:25px;
+    font-weight:bold;
+    color:white;
+    position:relative;
+    left:-35px;
+}
+
+/* list product sale */
+#imgProductSale img{
+    width:100%;
+    height: 500px;
+}
+
+#infoProductSale{
+    position: relative;
+    top: -400px;
+    text-align: center;
+    z-index: 5;
+    color:#3fd0d4;
+    font-family: 'Satisfy', cursive;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    font-size: 30px;
+}
+#nameBrandSale{
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: 5px 5px 7px black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+#infoBrandName{
+    color:#4bf7d1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: 5px 5px 7px black;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#countSlide{
+    display: flex;
+    position: relative;
+    top: 80px;
+    
+}
+
+#countSlide button{
+    width:20px;
+    height:20px;
+    margin:0px 10px;
+    border-radius: 20px;
+    position: relative;
+    left: 530px;
+}
+
+#slide1,
+#slide2,
+#slide3,
+#slide4,
+#slide5{
+    background-color:white;
+}
+#slide1:hover{
+    background-color:#3fd0d4;
+    cursor: pointer;
+}
+#slide2:hover{
+    background-color:#3fd0d4;
+    cursor: pointer;
+}
+#slide3:hover{
+    background-color:#3fd0d4;
+    cursor: pointer;
+}
+#slide4:hover{
+    background-color:#3fd0d4;
+    cursor: pointer;
+}
+#slide5:hover{
+    background-color:#3fd0d4;
+    cursor: pointer;
+}
+
+#content_productSales div{
+    margin:20px 0px;
+}
+
+#titleProductFastSell{
+    text-align: center;
+}
+#titleProductFastSell div:first-child h4{
+    font-family: 'Satisfy', cursive;
+    color:black;
+}
+#titleProductFastSell div:nth-child(2) h1{
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    color:#3fd0d4
+}
+#titleProductFastSell div:last-child h5{
+    color: #736d6d;
+    font-family: 'Poppins', sans-serif;
+}
+
+#lastSellProduct{
+    position: relative;
+    top: 20px;
+}
+
+#listProductFastSell{
+    display: flex;
+    position: relative;
+    top: 20px;
+   
+}
+#listProductFastSell #productSales{
+    width:250px;
+    height:350px;
+    margin:0px 10px;
+    transition: 2s;
+
+}
+
+#imgProductSales img{
+    width:224px;
+    height:350px
+}
+
+#content_productSales{
+    position: absolute;
+    top: 10px;
+}
+#price_ProductSales{
+    width:100px;
+    height:25px;
+    background-color:rgb(250 158 27);
+    text-align:center;
+}
+#price_ProductSales span{
+    font-weight: bold;
+    color:white;
+    font-size:20px;
+}
+
+#info_ProductSales{
+    text-align: center;
+    width:224px;
+}
+
+#name_ProductSales{
+    text-align: center;
+}
+#name_ProductSales span{
+    font-weight: bold;
+    font-size:35px;
+    color:rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px black;
+}
+
+#info_ProductSales{
+    text-align: center;
+}
+
+#info_ProductSales span{
+    text-shadow: 5px 5px 5px black;
+    color: rgb(255, 255, 255);
+    font-size:20px;
+    margin:5px 0px
+}
+
+#star_ProductSales{
+    text-align: center;
+}
+
+#star_ProductSales i{
+    font-size:25px;
+    color:tomato;
+}
+
+#book_ProductSales{
+    text-align: center;
+}
+#book_ProductSales:hover{
+    animation-name:shake;
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+#book_ProductSales button{
+    border-radius: 20px;
+    width:100px;
+    height:30px;
+    color:#3fd0d4;
+    font-weight: bold;
+    background-color:white;
+    cursor: pointer;
+}
+#next_back{
+    position:absolute;
+    display:flex;
+    justify-content:space-between;
+    top: 240px;
+}
+#nextSlide{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    background-color:#3fd0d4;
+    position: absolute;
+    left:1170px;
+    border: none;
+    cursor: pointer;
+ 
+}
+#nextSlide:hover{
+    background-color:#55b4b8;
+}
+#listProductFastSell #productSales:focus{
+    transform: translate3d(-240px, 0px, 0px);
+}
+
+#nextSlide i{
+    font-size:35px;
+    color:white;
+}
+#backSlide{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    background-color:#3fd0d4;
+    border: none;
+    cursor: pointer;
+}
+#backSlide i{
+    font-size:35px;
+    color:white;
+}
+#backSlide:hover{
+    background-color:#55b4b8;
+}
+
+
+
+
+

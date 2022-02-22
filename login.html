@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css"></link>
+    <link rel="stylesheet" href="login.css">
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body>
+    <div id="web">
+        <div id="form_login_register">
+
+            <div id="click_In_Login">
+                <h3>Already Have An Account ?</h3>
+                <button onclick="nextSignIn()">Sign in</button>
+            </div>
+
+            <div id="click_In_Register">
+                <h3>Don't have An Account ?</h3>
+                <button id="next_Sign_Up" onclick="nextSignUp()">Sign up</button>
+            </div>
+
+            <div id="click_In_Register"></div>
+
+            <div id="form_login">
+               <div id="login">
+                    <div id="Sign_In">
+                        <h1>Sign In</h1>
+                    </div>
+                    <div id="SignIn_name">
+                        <input type="text" id="userName" placeholder="Username : Pham Tien Tam">
+                        <span id="error_username"></span>
+                    </div>
+                    <div id="SignIn_password">
+                        <input type="password" id="password" placeholder="Password : Tamkem511@">
+                        <span id="error_password"></span>
+                        <button id="showPass" onclick="showPass()">
+                            <i class="fa fa-eye" id="iconEye"></i>
+                        </button>
+                    </div>
+                    <button id="submit" onclick="Submits()">
+                        <h2>Submit</h2>
+                    </button>
+                </div>
+            </div>
+
+            <div id="form_register">
+                <div id="Btb_register">
+                        <!-- <div id="Sign_In">
+                            <h1>Sign Up</h1>
+                        </div>
+                        <div id="SignUp_name">
+                            <input type="text" id="add_userName" placeholder="Username">
+                            <span id="error_add_username">Please enter your account</span>
+                        </div>
+                        <div id="SignUp_email">
+                            <input type="text" id="add_email" placeholder="Email address">
+                            <span id="error_add_email">Please enter your account</span>
+                        </div>
+                        <div id="SignUp_password">
+                            <input type="text" id="add_password" placeholder="Password">
+                            <span id="error_add_password">Please enter your account</span>
+                        </div>
+                        <div id="SignUp__confirmpassword">
+                            <input type="text" id="add_confirm_password" placeholder="Confirm Password">
+                            <span id="error_add_confirm_password">Please enter your account</span>
+                        </div>
+                        <button id="register">
+                            <h2>Register</h2>
+                        </button> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

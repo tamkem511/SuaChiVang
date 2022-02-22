@@ -1,0 +1,592 @@
+
+#titleProductComment{
+    text-align: center;
+    position: relative;
+    top: 170px;
+}
+#titleProductComment div:first-child h4{
+    font-family: 'Satisfy', cursive;
+    color:black;
+}
+#titleProductComment div:nth-child(2) h1{
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    color:#3fd0d4
+}
+#titleProductComment div:last-child h5{
+    color: #736d6d;
+    font-family: 'Poppins', sans-serif;
+}
+#createComment{
+     position: relative; 
+     top: 180px; 
+    width: 100%;
+    height:500px;
+
+}
+#next_back-Slider{
+    width: 75%;
+    margin:0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#next_back-Slider button{
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    cursor: pointer;
+    background-color: #3fd0d4;
+    position: relative;
+    z-index: 11;
+    top: 160px;
+}
+#next_back-Slider button i{
+    font-size:30px;
+    color:white;
+}
+#renderSlider{
+    overflow:hidden;
+    position: relative;
+    width:70%;
+    height:400px;
+    left: 20px;
+}
+#slideMain{
+    display:flex;
+    position: relative;
+    transition: transform 2s ease-in-out;
+    /* transform :translateX(-870px); */
+}
+.listSlide{
+    display: flex;
+}
+.listSlide div{
+    margin:0px 10px;
+}
+.slider-items{
+    width:250px;
+    height:350px;
+    background-color: red;
+}
+
+
+#choosePage{
+    position: relative;
+    cursor: pointer;
+}
+#choosePage button{
+    margin:0px 15px;
+    position:relative;
+    left:330px;
+}
+.slidePage{
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+}
+
+/* xử lí form comment */
+
+.slider-items img{
+    width:250px;
+    height:350px;
+    z-index: 1;
+}
+/* #logoClient{
+    width:250px;
+    height:350px;
+    z-index: 1;
+} */
+
+#likeComment{
+    position: relative;
+    top: -350px;
+    z-index: 2;
+}
+#likeComment div:first-child{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(248, 110, 55)
+}
+#likeComment div:first-child i{
+    font-size:25px;
+    margin:5px 0px
+}
+
+#likeComment div:last-child{
+    color:black;
+    font-weight:bold;
+    position: relative;
+    top: -30px;
+    left:30px;
+    width:40px;
+    height:15px;
+    border-radius:20px;
+    background-color:white;
+    text-align:center;
+}
+
+#contentComment{
+    background-color:rgba(49, 18, 75, .8);
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    height:190px;
+    top: 160px;
+    margin:0px 0px
+}
+#name_And_time{
+    position: relative;
+    top: -40px;
+    width:150px;
+    height:60px;
+    background-color:white;
+    text-align: center;
+    box-sizing: border-box;
+    padding:10px 0px;
+}
+#name_And_time div{
+    font-size: 13px;
+    color: rgb(104, 100, 100);
+    margin:5px 0px
+}
+#bodyComment{
+    position: relative;
+    top: -20px;
+    color:white;
+}
+#follow_and_addfriend{
+    display: flex;
+    width:200px;
+    justify-content: space-between;
+    position: absolute;
+    top: 110px;
+}
+#follow_and_addfriend button{
+   position: relative;
+   left:15px;
+   top: 40px;
+   width:60px;
+   border-radius: 20px;
+   background-color:#3fd0d4;
+   color:white;
+   font-weight:bold;
+   cursor: pointer;
+   height:30px
+}
+
+/* Phần thông tin cửa hàng và úuer */
+#infoProduct_user{
+    width:100%;
+    height:150px;
+    background-color:#3fd0d4;
+    position: relative;
+    top: 150px;
+    display: flex;
+}
+
+#infoProduct_user div{
+    margin:12px 30px
+}
+
+#sumProduct{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#sumProduct div:first-child{
+    font-size:40px
+}
+
+#sumUser{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#sumUser div:first-child{
+    font-size:40px
+}
+#productSeller{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#productSeller div:first-child{
+    font-size:40px
+}
+#product_quality{
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#product_quality div:first-child{
+    font-size:40px
+}
+
+/* thêm conmment */
+#addContentComment{
+    position: relative;
+    width:250px;
+    height:350px;
+    left:940px;
+    top: -400px;
+    border:2px solid rgb(241, 208, 19)
+}
+
+#addContentComment img{
+    width:250px;
+    height:350px;
+}
+
+#titleAddComment{
+    position: relative;
+    width:250px;
+    height:30px;
+    background-color: #3fd0d4;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    color: white;
+    top: -354px;
+}
+#linkIMG{
+    position: relative;
+    width: 250px;
+    top: -320px;
+    text-align: center;
+}
+#link{
+    width:200px;
+    height:30px;
+    border-radius: 20px;
+    padding:0px 5px
+}
+
+#name_and_comment{
+    background-color: rgba(49, 18, 75, .6);
+    width:250px;
+    height:190px;
+    position: relative;
+    top: -273px;
+}
+
+#nameClient{
+    width:180px;
+    height:80px;
+    background-color:white;
+    position: relative;
+    left:35px;
+    top: -40px;
+    /* text-align: center; */
+}
+#nameClient div{
+    margin: 15px 5px;
+}
+
+#enterYourName{
+    width:172px;
+    height:30px;
+    padding:0px 5px;
+    box-sizing: border-box;
+    border: none;
+    outline: none
+}
+#timeEnterComment{
+    color:#838e8f
+}
+#enterYourName:focus{
+    border:2px solid #3fd0d4
+}
+
+#enterComment{
+    position: relative;
+    top: -60px;
+    margin-top: 34px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    width: 90%;
+    resize: none;
+    height: 80px;
+    background-color: transparent;
+    outline: 2px solid white;
+    border: none;
+    padding: 8px 20px 0;
+    line-height: 1.6rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+#sendComment{
+    position: relative;
+    top: -50px;
+    left:30px;
+}
+#sendComment button{
+    width:120px;
+    height:30px;
+    border-radius: 20px;
+    background-color: #3fd0d4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#titlesellProduct_byBulk{
+    text-align: center;
+    position: relative;
+    top:100px;
+}
+#titlesellProduct_byBulk div:first-child h4{
+    font-family: 'Satisfy', cursive;
+    color:black;
+}
+#titlesellProduct_byBulk div:nth-child(2) h1{
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    color:#3fd0d4
+}
+#titlesellProduct_byBulk div:last-child h5{
+    color: #736d6d;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* đặt hàng với số lượng lớn */
+
+#formDangKy{
+    position: relative;
+    top: 170px;
+    width: 100%;
+    height: 500px;
+    display:flex;
+    background-color: #3fd0d4;
+}
+
+#table1{
+    width:300px;
+    height:500px;
+    background-color: #e7dc75;
+}
+#table2{
+    position:relative;
+    top: -50px;
+    width:700px;
+    height:600px;
+    background-color: white;
+    box-shadow: 0 50px 50px rgb(0 0 0 / 25%);
+}
+#table3{
+    width:300px;
+    height:450px;
+    background-color: #3fd0d4;
+    position: absolute;
+    top: 20px;
+    left:100px;
+}
+
+#table4{
+    position:relative;
+    left:0px;
+    width:300px;
+    height:500px;
+    background-color: #46b373;
+ 
+}
+
+#address{
+    position:absolute;
+    top: 50px;
+    display: flex;
+}
+#address div{
+    margin:0px 10px;
+    color:white;
+}
+#address div:first-child i{
+    font-size:30px;
+    color:white;
+}
+
+#accountEmail{
+    display: flex;
+    position:absolute;
+    top: 150px;
+}
+
+#accountEmail div{
+    margin:0px 10px;
+    color:white;
+}
+
+#accountEmail div:first-child i{
+    font-size:30px;
+}
+
+#telephone{
+    position:absolute;
+    top: 250px;
+    display: flex;
+}
+#telephone div{
+    margin:0px 20px;
+    color:white;
+}
+#telephone div:first-child i{
+    font-size:30px;
+    color:white;
+}
+
+#linkNetwork{
+    display: flex;
+    position:absolute;
+    top: 350px;
+    left:50px;
+}
+
+#linkNetwork div{
+    margin:0px 10px;
+}
+
+#linkNetwork div i{
+    font-size:30px;
+    color:white;
+}
+
+#formOrder{
+    position:absolute;
+    left:150px;
+    top: 100px;
+}
+#formOrder div{
+    margin:30px 0px
+}
+
+#first_last-Name input{
+    outline:none;
+    width:200px;
+    height:30px;
+    margin:0px 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#email_mobiphone div{
+    margin:30px 0px
+}
+
+#email_mobiphone input{
+    outline:none;
+    width:200px;
+    height:30px;
+    margin:0px 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#brand_amount div{
+    margin:30px 0px
+}
+
+#brand_amount input{
+    outline:none;
+    width:200px;
+    height:30px;
+    margin:0px 15px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#order{
+    position: relative;
+    left:15px
+}
+
+#order button {
+    background-color:#3fd0d4;
+    width:200px;
+    height:30px;
+    border: none;
+    font-size:20px;color:white;
+}
+
+footer{
+    background-color:rgb(53 58 58);
+    width:100%;
+    height:300px;
+    position:absolute;
+    bottom: -550px;
+    display:flex;
+    justify-content:space-between;
+}
+
+#column1 div{
+    margin: 10px 10px;
+}
+#column1 div i{
+    font-size: 50px;
+    color: #3fd0d4;
+}
+#column1 div:first-child{
+  display: flex;
+}
+#column1 div h3{
+    font-size:25px;
+    color:white;
+}
+
+#column1 div:last-child{
+    width:270px;
+    color:white;
+
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 8px;
+}
+
+#column2 div:last-child{
+    display: flex;
+}
+
+#column2 div{
+    margin: 20px 20px;
+    font-size:30px;
+    color:white;
+}
+
+#column2 div i{
+    color: #000;
+}
+
+#column3 div{
+    font-size:30px;
+    margin:20px 10px;
+    color:white;
+}
+#column3 div:last-child input{
+    width:250px;
+    height:50px;
+    font-size:20px;
+    padding:0px 10px;
+}
+#copyBy{
+    width:100%;
+    text-align:center;
+    height:24px;
+    background-color: aqua;
+    position: relative;
+    top: 570px;
+}

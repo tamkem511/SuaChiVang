@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes scales{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* #fixedPart{
+    display:none;
+}
+
+#movablePart{
+    display:none;
+} */
+
+#menuCategorySearch{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    transition:ease-in 1s;
+    transform:translateX(-1300px);
+    z-index: 9;
+}
+#listMenuSearch{
+    position: absolute;
+    left: 550px;
+    top: 100px;
+    width:150px
+}
+#listMenuSearch li{
+    width:100%;
+    height:30px;
+    margin:20px 0px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding:2px 0px;
+    border-radius:20px
+}
+#listMenuSearch li a{
+    text-decoration:none;
+    font-size: 20px;
+    font-weight: 700;
+    color:Black;
+    border-radius: 20px;
+    width:180px;
+    height:30px;
+    transition: 0.6;
+
+}
+#listMenuSearch li a:hover{
+    color:white;
+    background-color:black;
+    transition: 1s;
+}
+
+/* phần header */
+header{
+    width: 100%;
+    height: 70px;
+    background-color:white;
+    padding:0px 20px;
+    display: flex;
+    position:fixed;
+    border-bottom: 2px solid black;
+    z-index: 15;
+}
+
+#logoShop{
+    display: flex;
+
+}
+
+#logoShop h3{
+    position: relative;
+    font-size:40px;
+    color:rgb(63,208,212);
+    top: 10px;
+    left: 5px;
+    font-family: cursive;
+}
+
+#logoShop img{
+    width:70px;
+}
+
+#nameShop{
+    position: relative;
+    color:rgb(63,208,212);
+    left:270px;
+    top: 13px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#account_lastSearch{
+    display: flex;
+    position: relative;
+    left:500px;
+    top: 15px;
+}
+#account_lastSearch div{
+    margin:0px 10px
+}
+
+#myLogo{
+    border-radius:10px;
+    width:34px;
+    height:40px;
+    background-color: transparent;
+    border: none;
+}
+#myLogo img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#clickLM{
+    width:34px;
+    height:40px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#clickLM i{
+    font-size:25px;
+    cursor: pointer;
+}
+
+#menuIcons{
+    width:34px;
+    height:40px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+#menuIcons i{
+    font-size:25px;
+    cursor: pointer;
+}
+
+/* phần form account */
+#formAccount{
+    position:absolute;
+    width:200px;
+    height:160px;
+    background-color:rgb(63,208,212);
+    right:20px;
+    border:2px solid black;
+    z-index: 10;
+    animation-name: scales;
+    animation-duration:3s;
+    display:none;
+}
+
+
+#formAccount> div> button{
+    width:200px;
+    margin:0px -10px;
+    height:30px;
+    cursor: pointer;
+    background-color:rgb(63,208,212)
+}
+
+#changeNameRender{
+    z-index: 10;
+    position:absolute;
+    right:400px;
+    width:300px;
+    background-color:rgb(63,208,212);
+    border:1px solid black;
+    animation-name: scales;
+    animation-duration:3s;
+    border-radius: 20px;
+    display: none;
+}
+#changeNameRender h3{
+    text-align: center;
+    margin:5px 0px
+}
+#formChangeName{
+    margin:5px 0px
+}
+#examPassword,
+#newName{
+    width:275px;
+    height:25px
+}
+#confirm_or_cancel{
+    display: flex;
+}
+#confirm_or_cancel button{
+    width:100px;
+    height:30px;
+    margin:5px 20px;
+    cursor: pointer;
+}
+#confirm_or_cancel button:first-child:hover{
+    background-color:greenyellow;
+}
+#confirm_or_cancel button:last-child:hover{
+    background-color:rgb(141, 35, 35);
+}
+#errorExamPassword,
+#errorNewName{
+    color:red;
+}
+/* thay đổi ảnh đại diênnj */
+#cancelChangeLogo{
+    text-align:center;
+    margin:5px 125px;
+    width:50px;
+}
+#valueFile{
+    margin:0px 15px;
+}
+#chooseLogo{
+    z-index: 10;
+    position:absolute;
+    right:400px;
+    width:300px;
+    background-color:rgb(63,208,212);
+    border:1px solid black;
+    animation-name: scales;
+    animation-duration:3s;
+    border-radius: 20px;
+    display: none;
+}
+/* thay đổi mật khẩu */
+#changePassword{
+    z-index: 10;
+    position:absolute;
+    right:400px;
+    width:300px;
+    background-color:rgb(63,208,212);
+    border:1px solid black;
+    animation-name: scales;
+    animation-duration:3s;
+    border-radius: 20px;
+    display: none;
+}
+#errorExamChangePassword,
+#errorNewPassword{
+    color:red;
+}
+
+#oldPass,
+#newPass{
+    width:275px;
+    height:25px
+}
+
+
+
+/* Phần banner */
+#banner{
+    position: relative;
+    top: 72px;
+    width:100%;
+    height:500px;
+    display:flex;
+}
+
+#SocialNetwork{
+    position: absolute;
+    right:70px;
+    top: 200px;
+}
+#SocialNetwork a{
+    margin:10px 0px;
+}
+#speaker{
+    border-radius:100%;
+    outline: none;
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+}
+#speaker i{
+    font-size:30px;
+    
+}
+#speaker i:hover{
+    transform:translateY(2px);
+}
+#SocialNetwork > a > button{
+    border-radius:100%;
+    outline: none;
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+}
+#SocialNetwork > a > button:hover{
+    transform: translateY(2px);
+}
+#SocialNetwork > a > button > i{
+    font-size:30px;
+}
+/* #SocialNetwork > a > button > i{
+   color:white;
+} */

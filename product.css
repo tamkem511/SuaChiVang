@@ -1,0 +1,809 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@keyframes Fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Phần header */
+#menuCategorySearch{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    transition:ease-in 1s;
+    transform:translateX(-1300px);
+    z-index: 9;
+}
+#listMenuSearch{
+    position: absolute;
+    left: 550px;
+    top: 100px;
+    width:150px
+}
+#listMenuSearch li{
+    width:100%;
+    height:30px;
+    margin:20px 0px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding:2px 0px;
+    border-radius:20px
+}
+#listMenuSearch li a{
+    text-decoration:none;
+    font-size: 20px;
+    font-weight: 700;
+    color:Black;
+    border-radius: 20px;
+    width:180px;
+    height:30px;
+    transition: 0.6;
+
+}
+#listMenuSearch li a:hover{
+    color:white;
+    background-color:black;
+    transition: 1s;
+}
+
+/* phần header */
+header{
+    width: 100%;
+    height: 70px;
+    background-color:white;
+    padding:0px 20px;
+    display: flex;
+    position:fixed;
+    border-bottom: 2px solid black;
+    z-index: 15;
+}
+
+#logoShop{
+    display: flex;
+
+}
+
+#logoShop h3{
+    position: relative;
+    font-size:40px;
+    color:rgb(63,208,212);
+    top: 10px;
+    left: 5px;
+    font-family: cursive;
+}
+
+#logoShop img{
+    width:70px;
+}
+
+#nameShop{
+    position: relative;
+    color:rgb(63,208,212);
+    left:270px;
+    top: 13px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#account_lastSearch{
+    display: flex;
+    position: relative;
+    left:500px;
+    top: 15px;
+}
+#account_lastSearch div{
+    margin:0px 10px
+}
+
+#myLogo{
+    border-radius:10px;
+    width:34px;
+    height:40px;
+    background-color: transparent;
+    border: none;
+}
+#myLogo img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#clickLM{
+    width:34px;
+    height:40px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+#clickLM i{
+    font-size:25px;
+    cursor: pointer;
+}
+
+#menuIcons{
+    width:34px;
+    height:40px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+}
+#menuIcons i{
+    font-size:25px;
+    cursor: pointer;
+}
+
+/* phần form account */
+#formAccount{
+    position:absolute;
+    width:200px;
+    height:160px;
+    background-color:rgb(63,208,212);
+    right:20px;
+    border:2px solid black;
+    z-index: 10;
+    animation-name: scales;
+    animation-duration:3s;
+    display:none;
+}
+
+
+#formAccount> div> button{
+    width:200px;
+    margin:0px -10px;
+    height:30px;
+    cursor: pointer;
+    background-color:rgb(63,208,212)
+}
+
+#changeNameRender{
+    z-index: 10;
+    position:absolute;
+    right:400px;
+    width:300px;
+    background-color:rgb(63,208,212);
+    border:1px solid black;
+    animation-name: scales;
+    animation-duration:3s;
+    border-radius: 20px;
+    display: none;
+}
+#changeNameRender h3{
+    text-align: center;
+    margin:5px 0px
+}
+#formChangeName{
+    margin:5px 0px
+}
+#examPassword,
+#newName{
+    width:275px;
+    height:25px
+}
+#confirm_or_cancel{
+    display: flex;
+}
+#confirm_or_cancel button{
+    width:100px;
+    height:30px;
+    margin:5px 20px;
+    cursor: pointer;
+}
+#confirm_or_cancel button:first-child:hover{
+    background-color:greenyellow;
+}
+#confirm_or_cancel button:last-child:hover{
+    background-color:rgb(141, 35, 35);
+}
+#errorExamPassword,
+#errorNewName{
+    color:red;
+}
+/* thay đổi ảnh đại diênnj */
+#cancelChangeLogo{
+    text-align:center;
+    margin:5px 125px;
+    width:50px;
+}
+#valueFile{
+    margin:0px 15px;
+}
+#chooseLogo{
+    z-index: 10;
+    position:absolute;
+    right:400px;
+    width:300px;
+    background-color:rgb(63,208,212);
+    border:1px solid black;
+    animation-name: scales;
+    animation-duration:3s;
+    border-radius: 20px;
+    display: none;
+}
+/* thay đổi mật khẩu */
+#changePassword{
+    z-index: 10;
+    position:absolute;
+    right:400px;
+    width:300px;
+    background-color:rgb(63,208,212);
+    border:1px solid black;
+    animation-name: scales;
+    animation-duration:3s;
+    border-radius: 20px;
+    display: none;
+}
+#errorExamChangePassword,
+#errorNewPassword{
+    color:red;
+}
+
+#oldPass,
+#newPass{
+    width:275px;
+    height:25px;
+
+}
+
+#webb{
+    /* display:none; */
+    width:100%;
+    position:absolute;
+    transform:translateX(-1300px);
+    transition:1.5s linear;
+    z-index: 13;
+    background-color:white;
+}
+#prevSellProduct{
+    position: absolute;
+    top: -50px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color:white;
+    border: none;
+    cursor: pointer;
+}
+
+#prevSellProduct i{
+    font-size:30px;
+    color:aqua;
+}
+
+#addressClient{
+    width:290px;
+    height:30px;
+    border-top: none;
+    border-left:none;
+    border-right:none;
+    outline:none;
+}
+
+
+/* Phần search */
+#handleSearch{
+    position: absolute;
+    top: 200px;
+    /* left:200px; */
+    width: 100%;
+    z-index: 200;
+}
+#render_search_product{
+    position: absolute;
+    left: 100px;
+    z-index: 23;
+}
+#search_filter{
+    position: absolute;
+    left: 10px;
+    background-color:aqua;
+    border-radius: 5px;
+    z-index: 23;
+}
+.productSearch{
+    position: absolute;
+    width:200px;
+    height:350px;
+    background-color:rgb(60, 65, 70);
+    box-shadow: 5px 5px black;
+    border-radius: 5px;
+    z-index: 23;
+}
+.product_search_img img{
+    width:200px;
+    height:250px;
+    border-radius: 5px;
+    z-index: 23;
+}
+
+.product_search_content{
+    text-align: center;
+    z-index: 23;
+}
+.price_search_selled{
+    display: flex;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    z-index: 23;
+}
+.price_search_selled div{
+    margin: 0px 10px;
+}
+#search_sua_chua{
+    width:600px;
+    z-index: 23;
+}
+#search_sua_chua .productSearch:first-child{
+    position: absolute;
+    left:100px;
+    z-index: 200;
+}
+#search_sua_chua .productSearch:nth-child(2){
+    position: absolute;
+  left:370px;
+}
+#search_sua_chua .productSearch:nth-child(3){
+    position: absolute;
+  left:640px;
+}
+#search_sua_chua .productSearch:nth-child(4){
+    position: absolute;
+    left:910px;
+}
+
+#search_sua_chua .productSearch:nth-child(5){
+    position: absolute;
+    top: 400px;
+    left:100px;
+}
+#search_sua_chua .productSearch:nth-child(6){
+    position: absolute;
+    top: 400px;
+  left:370px;
+}
+
+#price_range input{
+    width:50px;
+}
+
+
+#confirmSearch{
+    background-color: tomato;
+    border-radius: 5px;
+    margin: 0px 50px;
+}
+
+#search_sua_chua .productSearch:hover{
+    cursor: pointer;
+    transform: translateY(2px);
+}
+
+
+/* Phần body */
+
+#contentProduct{
+    position: relative;
+    top: 140px;
+    left:50px;
+    display: flex;
+    width: 90%;
+}
+#imgRender img{
+    width: 400px;
+    height:400px;
+    cursor: pointer;
+}
+
+#imgOther{
+    display: flex;
+    justify-content: space-around;
+}
+#imgOther img{
+    width: 80px;
+    height:80px;
+    cursor: pointer;
+}
+
+#share_follow{
+    display: flex;
+    justify-content: space-around;
+}
+#evaluate{
+  display: flex;
+  justify-content: space-around;
+}
+#price_quantity{
+    display: flex;
+    justify-content: space-around;
+}
+#insurance{
+    display: flex;
+}
+#infosellProduct{
+    margin:0px 10px;
+}
+#infosellProduct div{
+    margin: 10px 0px;
+}
+
+
+/* name */
+#nameProductSell{
+    font-size:20px;
+    font-weight:bold;
+}
+#evaluate_star span{
+    color:tomato;
+}
+#evaluate_star i{
+    color:tomato;
+}
+#danhgia span:first-child{
+    font-weight:bold;
+}
+#daban span:first-child{
+    font-weight:bold;
+}
+#price_quantity{
+    background-color:slategrey;
+    border-radius: 5px;
+}
+
+#price_quantity div:first-child{
+    color: tomato;
+    font-size:20px
+}
+tr td:first-child{
+    /* text-align: center; */
+    color:tomato;
+    width:150px
+}
+
+
+#add_cart{
+    background-color:rgb(211, 102, 83);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    width:200px;
+    height:30px;
+}
+#confirmProduct{
+    background-color:rgb(243, 43, 8);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    width:200px;
+    height:30px;
+}
+#confirmSell{
+    display: flex;
+}
+#confirmSell button{
+    margin: 0px 5px;
+    cursor: pointer;
+}
+#share_follow{
+    margin: 12px 0px;
+}
+#share a{
+    text-decoration: none;
+}
+#cancelProduct{
+    background-color:rgb(243, 43, 8);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    width:200px;
+    height:30px;
+}
+#cancelProduct button {
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+/* Phần thông tin của hàng */
+
+#logo_shop img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    margin: 10px 20px;
+}
+
+#infomation_shop{
+    position: relative;
+    top:170px;
+    left:50px;
+    width:1100px;
+    height:100px;
+    background-color:wheat;
+    display:flex
+}
+#infomation_shop hr{
+    margin: 0px 50px;
+}
+#employee{
+    display: flex;
+}
+#status_shop div{
+    margin: 5px 0px;
+}
+#shop_name{
+    font-weight: bold;
+}
+#time_active{
+    color:slategray
+}
+#chat button{
+    background-color:tomato;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#chat button:hover{
+    background-color:rgb(199, 103, 86);
+}
+
+#title_rate span:nth-child(2){
+    color:tomato;
+}
+
+/* Phần comment sản phẩm */
+#comment_product{
+    position: relative;
+    top:500px;
+    left:50px;
+    width: 90%;
+    height:500px
+}
+#enter_comment{
+    width:1000px;
+    margin:20px 0px;
+    display:flex;
+}
+#enter_comment input{
+    width:1000px;
+    height:40px;
+    border-radius: 20px;
+    padding:0px 10px;
+   
+}
+#to_send{
+    position:absolute;
+    right:-9px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#to_send i{
+    font-size:40px;
+    height:40px;
+    border-radius: 5px;
+}
+.fa-sign-in-alt{
+    border-radius:20px;
+}
+
+/* Phần user Comment */
+
+#comment_product{
+    position: relative;
+    top: 200px;
+    left:50px;
+}
+#avata_user img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#user_comment{
+    position: relative;
+    left:100px;
+}
+.userCmt{
+    display: flex;
+    position: relative;
+}
+
+.userCmt div{
+   margin: 0px 5px;
+}
+#info_user div{
+    margin: 5px 0px;
+}
+#user_comment .userCmt{
+    margin:10px 0px
+}
+#user_comment hr{
+   width:900px;
+}
+#info_user{
+    width:800px
+}
+.addLike{
+    background-color: tomato;
+}
+
+.handleComments{
+    height:20px;
+}
+.del_fix{
+    width:50px;
+    height:30px;
+    display:flex;
+}
+.del_fix button{
+    margin: 3px 10px;
+}
+.send{
+   height:25px;
+   margin: 3px 50px;
+   display:none;
+}
+/* Phần chat ngay */
+#chat_now{
+    position:absolute;
+    width:200px;
+    height:250px;
+    z-index: 10;
+    /* background-color:wheat;
+    border:2px solid sienna; */
+}
+.logo_name_shop img{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+}
+.logo_name_shop span{
+    position: relative;
+    top: -10px;
+    color:teal;
+}
+.text_by_user{
+    width:150px;
+}
+#text_by_client{
+    position: relative;
+    width:150px;
+}
+#text_by_client div{
+    position: relative;
+    right: -60px;
+}
+.enterChats{
+    position: relative;
+    top:80px;
+}
+
+#footerProduct{
+    position: absolute;
+    list-style: none;
+    width:100%;
+    top:900px;
+}
+.infoShop{
+    display: flex;
+}
+.infoShop li{
+    list-style: none;
+    width: 100%;
+    margin: 0px 20px;
+}
+.ngancach3{
+    position: relative;
+    top: 300px;
+}
+.end2{
+    position: relative;
+    text-align: center;
+}
+
+#phoneOfClient{
+    width:290px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+#chat_now{
+    position: fixed;
+    width: 250px;
+    height:300px;
+    left:960px;
+    top:300px;
+    /* background-color:red; */
+    border:2px solid black;
+    overflow: hidden;
+    display:none;
+}
+#titleChatNow{
+    display:flex;
+    background-color:white;
+    position: relative;
+    top: -5px;
+    box-shadow: 0px 5px 10px black;
+}
+#titleChatNow div{
+    margin:0px 5px
+}
+#imgChatNow img{
+    width:30px;
+    height:30px;
+    border-radius:100%;
+}
+.fa-phone{
+    margin: 0px 9px;
+}
+#callChatNow{
+    display:flex;
+    position: relative;
+    top: 8px;
+}
+#timeFormChatNow{
+    width:20px;
+    height:20px;
+    border:none;
+    background-color:transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+#timeFormChatNow:hover{
+    background-color:rgb(199, 110, 95)
+}
+#enter-send_ChatNow{
+    background-color:white;
+    width:100%;
+    height:35px;
+    position: relative;
+    top: 221px;
+    box-shadow: 0px -5px 15px black;
+    z-index: 5;
+}
+#message{
+    width:200px;
+    height:25px;
+    border-radius: 20px;
+    position: relative;
+    top: 3px;
+    padding:0px 5px;
+}
+
+#clickSend{
+    position: relative;
+    top:-29px;
+    left:220px;
+    height:25px;
+    width:25px;
+    z-index: 3;
+}
+
+#renderChatNow{
+   /* height:30px; */
+   background-color:rgb(13, 149, 240);
+   position: absolute;
+   border-radius: 10px;
+   width:160px;
+   left:5px
+}
+#renderChatNow span{
+    position: relative;
+    top: -1px;
+    /* width:100px; */
+    left:10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: cursive;
+}
